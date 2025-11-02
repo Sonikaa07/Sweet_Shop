@@ -1,0 +1,15 @@
+{
+  "name": "sweet-shop-monorepo",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "install-all": "npm install --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
